@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoxForge | Autonomous Voice Agents & Real-Time Conversational AI</title>
+  <meta name="description" content="Enterprise voice intelligence platform powering low-latency conversational agents, multimodal telecommunication, and automated speech synthesis.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#0f172a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-[#090D16] text-slate-200 antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#090D16]/80 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-6 h-18 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-cyan-400 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/30">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" />
+          </svg>
+        </div>
+        <span class="text-xl font-extrabold tracking-tight text-white">Vox<span class="text-indigo-400">Forge</span></span>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#platform" class="hover:text-white transition">Platform</a>
+        <a href="#architecture" class="hover:text-white transition">Architecture</a>
+        <a href="#solutions" class="hover:text-white transition">Solutions</a>
+        <a href="#api" class="hover:text-white transition">API & SDK</a>
+        <a href="#enterprise" class="hover:text-white transition">Enterprise</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="#contact" class="text-xs font-semibold uppercase tracking-wider text-slate-300 hover:text-white hidden sm:block">Console Login</a>
+        <a href="#contact" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition shadow-md shadow-indigo-600/30">Request Sandbox Access</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-24 pb-20 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.25),rgba(255,255,255,0))]"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-950/40 text-indigo-300 text-xs font-medium mb-8">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Built for sub-300ms Realtime Multimodal Inference
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.15]">
+        The Engine for <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-cyan-300">Autonomous Realtime Voice AI</span>
+      </h1>
+
+      <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        VoxForge transforms enterprise customer communication through ultra-low-latency voice agents powered by frontier multimodal LLMs, dynamic tool execution, and contextual RAG memory.
+      </p>
+
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-base shadow-xl shadow-indigo-600/30 transition">
+          Deploy Voice Pipeline
+        </a>
+        <a href="#architecture" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-slate-900/80 border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold text-base transition">
+          Read Architecture Whitepaper
+        </a>
+      </div>
+
+      <!-- Live Pipeline Diagram / Benchmark -->
+      <div class="mt-16 border border-slate-800 rounded-2xl bg-slate-950/70 p-6 shadow-2xl backdrop-blur-sm max-w-4xl mx-auto text-left">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
+          <div class="flex items-center space-x-2">
+            <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+            <span class="ml-2 text-xs font-mono text-slate-400">voxforge-telephony-agent // cluster-production-us-east-1</span>
+          </div>
+          <span class="text-xs font-mono px-2 py-1 rounded bg-emerald-950/60 text-emerald-400 border border-emerald-800/40">Status: Active Stream</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+          <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800/60">
+            <div class="text-xs uppercase text-slate-400 font-semibold tracking-wider">SIP / WebRTC Ingestion</div>
+            <div class="text-xl font-bold text-white mt-1">Opus 48kHz</div>
+            <div class="text-xs text-slate-500 mt-0.5">Bi-directional socket</div>
+          </div>
+          <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800/60">
+            <div class="text-xs uppercase text-slate-400 font-semibold tracking-wider">LLM Orchestration</div>
+            <div class="text-xl font-bold text-indigo-400 mt-1">OpenAI Realtime</div>
+            <div class="text-xs text-slate-500 mt-0.5">GPT-4o Multimodal</div>
+          </div>
+          <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800/60">
+            <div class="text-xs uppercase text-slate-400 font-semibold tracking-wider">Turnaround Latency</div>
+            <div class="text-xl font-bold text-cyan-400 mt-1">&lt; 280 ms</div>
+            <div class="text-xs text-slate-500 mt-0.5">VAD + Speech-to-Speech</div>
+          </div>
+          <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800/60">
+            <div class="text-xs uppercase text-slate-400 font-semibold tracking-wider">Tool Calling & RAG</div>
+            <div class="text-xl font-bold text-purple-400 mt-1">Sub-Zero Sync</div>
+            <div class="text-xs text-slate-500 mt-0.5">CRM & SQL write-back</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Metric Badges -->
+  <section class="border-y border-slate-800 bg-slate-950/40 py-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-3xl font-extrabold text-white font-mono">1.8M+</div>
+        <div class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Conversational Minutes Routed</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-indigo-400 font-mono">99.98%</div>
+        <div class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Telephony Uptime SLA</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-cyan-400 font-mono">240ms</div>
+        <div class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Average Voice Response Delay</div>
+      </div>
+      <div>
+        <div class="text-3xl font-extrabold text-purple-400 font-mono">60+</div>
+        <div class="text-xs uppercase tracking-wider text-slate-400 mt-1 font-semibold">Dialects & Native Accents</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Features -->
+  <section id="platform" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-semibold uppercase tracking-widest text-indigo-400">Enterprise Voice Infrastructure</h2>
+        <p class="mt-3 text-3xl sm:text-4xl font-extrabold text-white">Engineered for Massive Real-Time Token Throughput</p>
+        <p class="mt-4 text-slate-400 leading-relaxed">
+          Traditional chatbots fail in voice due to latency and unnatural interruption handling. VoxForge integrates end-to-end multimodal audio streams to mimic human conversational flow.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Native Multimodal Streaming</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Eliminate transcription round-trips. Direct audio-in to audio-out pipeline preserves emotion, tone modulation, and non-verbal cues.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Dynamic Interruptibility</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Advanced client-side Voice Activity Detection (VAD) stops the agent mid-sentence immediately if interrupted, mirroring authentic human conversational rhythm.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-cyan-600/20 text-cyan-400 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Realtime Function Calling</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Trigger custom microservices, query vector databases, and execute verified database transactions during active live calls without breaking dialogue context.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- API Code Demonstration -->
+  <section id="api" class="py-20 bg-slate-950/60 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-widest text-indigo-400">Developer First Integration</span>
+        <h2 class="text-3xl font-extrabold text-white mt-3 leading-tight">Orchestrate Voice Workflows with Minimal Lines of Code</h2>
+        <p class="text-slate-400 mt-4 text-sm leading-relaxed">
+          VoxForge abstracts the complexities of SIP trunks, Opus codecs, WebRTC negotiation, and high-frequency WebSocket duplex streaming. Build an AI customer specialist in minutes.
+        </p>
+        <ul class="mt-6 space-y-3 text-sm text-slate-300">
+          <li class="flex items-center gap-2">
+            <span class="text-indigo-400 font-bold">✓</span> Full compatibility with OpenAI Realtime API protocols
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-indigo-400 font-bold">✓</span> Integrated Twilio, Plivo, and Telnyx telephony bridging
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-indigo-400 font-bold">✓</span> Automated transcript indexing, semantic categorization & compliance logging
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-[#05070e] border border-slate-800 rounded-xl p-5 shadow-2xl overflow-x-auto text-xs text-slate-300 font-mono">
+        <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800 text-slate-500">
+          <span>agent_runtime.py</span>
+          <span>Python 3.11</span>
+        </div>
+<pre><span class="text-purple-400">import</span> voxforge <span class="text-purple-400">as</span> vf
+<span class="text-purple-400">from</span> voxforge.agents <span class="text-purple-400">import</span> VoiceAgent, RealtimeConfig
+
+<span class="text-slate-500"># Configure real-time voice inference pipeline</span>
+agent = VoiceAgent(
+    name=<span class="text-emerald-300">"enterprise-support-tier1"</span>,
+    model=<span class="text-emerald-300">"gpt-4o-realtime-preview"</span>,
+    voice=<span class="text-emerald-300">"verse"</span>,
+    instructions=<span class="text-emerald-300">"Assist customers with enterprise billing and support queries."</span>,
+    tools=[vf.tools.LookupAccount, vf.tools.ScheduleDispatch],
+    config=RealtimeConfig(
+        vad_sensitivity=<span class="text-amber-400">0.85</span>,
+        max_turn_delay_ms=<span class="text-amber-400">300</span>,
+        temperature=<span class="text-amber-400">0.6</span>
+    )
+)
+
+<span class="text-slate-500"># Bind agent directly to incoming SIP telephony channel</span>
+vf.telephony.attach_trunk(
+    trunk_id=<span class="text-emerald-300">"sip_us_east_primary"</span>, 
+    active_agent=agent
+)
+<span class="text-cyan-400">print</span>(<span class="text-emerald-300">"Agent live and streaming..."</span>)</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Access Request Form (Credibility Anchor) -->
+  <section id="contact" class="py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 p-8 sm:p-10 rounded-2xl shadow-xl text-center">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Join the VoxForge Enterprise Partner Program</h2>
+        <p class="mt-3 text-slate-400 text-sm">
+          We are currently onboarding selected early-access enterprise partners and scale-stage developers.
+        </p>
+
+        <form class="mt-8 space-y-4 text-left" onsubmit="event.preventDefault(); alert('Request submitted! Our team will reach out within 24 business hours.');">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase">Work Email</label>
+              <input type="email" required placeholder="founder@yourcompany.com" class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase">Organization Name</label>
+              <input type="text" required placeholder="Company or Team Name" class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase">Projected Voice API Volume (Tokens / Mo)</label>
+            <select class="w-full px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500">
+              <option>100M - 500M Tokens / Month</option>
+              <option>500M - 2B Tokens / Month</option>
+              <option>2B+ Tokens / Month (Dedicated Cluster)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1.5 uppercase">Primary AI Use Case</label>
+            <textarea rows="3" placeholder="Briefly describe your real-time conversational agent deployment..." class="w-full px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm transition shadow-lg shadow-indigo-600/30">
+            Submit Application for Sandbox Key
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-900 py-12 bg-[#06080F] text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-slate-300">VoxForge</span>
+        <span>•</span>
+        <span>Autonomous Realtime Speech Intelligence</span>
+      </div>
+      <div>
+        <span>© 2026 VoxForge Inc. All rights reserved. Built for Next-Gen Multimodal AI.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
